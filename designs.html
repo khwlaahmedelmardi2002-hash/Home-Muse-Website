@@ -1,0 +1,1059 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-385838029">
+    </script>
+    <script>
+        window.dataLayer=window.dataLayer||[];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js' ,new Date());
+        gtag('config', 'G-385838029');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Muse | Design Inspirations</title>
+    <link rel="stylesheet"href="styles.css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --soft-white: #FAF9F6;
+            --warm-white: #F5F5F5;
+            --rich-brown: #8B4513;
+            --chocolate-brown: #5D4037;
+            --caramel-brown: #A67B5B;
+            --light-brown: #D7CCC8;
+            --dark-brown: #3E2723;
+            --text-dark: #2C1810;
+            --text-light: #FAF9F6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Playfair Display', 'Georgia', serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+            background-color: var(--soft-white);
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: var(--soft-white);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.5s ease;
+            box-shadow: 0 2px 20px rgba(180, 120, 77, 0.05);
+        }
+        
+        header.scrolled {
+            padding: 1rem 0;
+            background-color: rgba(250, 249, 246, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--rich-brown);
+            letter-spacing: 2px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .logo span {
+            color: var(--caramel-brown);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+        
+        nav a {
+            color: var(--dark-brown);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 0 10px; /*0 for top/10px for left*/
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--rich-brown);
+        }
+        
+        nav a.active {
+            color: var(--rich-brown);
+            font-weight: 600;
+        }
+        
+        nav a.active:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--rich-brown);
+        }
+        
+        nav a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--rich-brown);
+            transition: width 0.3s;
+        }
+        
+        nav a:hover:after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .designs-hero {
+            /* Replace'new-image.jpg'With your actual file name*/
+            padding: 8rem 0 5rem;
+            background: 
+                linear-gradient(rgba(250, 249, 246, 0.9), rgba(250, 249, 246, 0.9)),
+              url('images/title background.jpg');
+              /*These properties ensure the image covers the whole area nicely*/
+              background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+        
+        .designs-hero h1 {
+            font-size: 4rem;
+            color: var(--rich-brown);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .designs-hero p {
+            font-size: 1.5rem;
+            color: var(--chocolate-brown);
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+        
+        .inspiration-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            color: var(--caramel-brown);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .divider {
+            width: 80px;
+            height: 2px;
+            background-color: var(--caramel-brown);
+        }
+        
+        /* Design Categories */
+        .categories-section {
+            padding: 6rem 0;
+            background-color: var(--warm-white);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            color: var(--rich-brown);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: var(--caramel-brown);
+            margin-bottom: 4rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 4rem;
+        }
+        
+        .category-tab {
+            padding: 0.8rem 2rem;
+            background-color: var(--soft-white);
+            color: var(--chocolate-brown);
+            border: 2px solid var(--light-brown);
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .category-tab:hover {
+            background-color: var(--light-brown);
+            color: var(--rich-brown);
+        }
+        
+        .category-tab.active {
+            background-color: var(--rich-brown);
+            color: var(--text-light);
+            border-color: var(--rich-brown);
+        }
+        
+        /* Designs Gallery */
+        .designs-gallery {
+            padding: 2rem 0 6rem;
+            background-color: var(--soft-white);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .design-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(139, 69, 19, 0.08);
+            transition: all 0.4s;
+            background-color: var(--warm-white);
+        }
+        
+        .design-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(139, 69, 19, 0.15);
+        }
+        
+        .design-image {
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .design-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .design-item:hover .design-image img {
+            transform: scale(1.05);
+        }
+        
+        .image-label {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background-color: rgba(139, 69, 19, 0.8);
+            color: var(--text-light);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            z-index: 2;
+        }
+        
+        .design-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 60%, rgba(62, 39, 35, 0.8) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            color: var(--text-light);
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1;
+        }
+        
+        .design-item:hover .design-overlay {
+            opacity: 1;
+        }
+        
+        .design-category {
+            display: inline-block;
+            background-color: var(--caramel-brown);
+            color: var(--text-light);
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            align-self: flex-start;
+        }
+        
+        .design-overlay h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+        
+        .design-overlay p {
+            font-size: 1rem;
+            color: var(--light-brown);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+        
+        .design-info {
+            padding: 1.8rem;
+        }
+        
+        .design-info h3 {
+            font-size: 1.5rem;
+            color: var(--rich-brown);
+            margin-bottom: 0.8rem;
+        }
+        
+        .design-info p {
+            color: var(--chocolate-brown);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .view-details {
+            color: var(--rich-brown);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+        
+        .view-details:hover {
+            color: var(--caramel-brown);
+            gap: 1rem;
+        }
+        
+        /* Upload Section */
+        .upload-section {
+            padding: 6rem 0;
+            background-color: var(--dark-brown);
+            color: var(--text-light);
+            text-align: center;
+        }
+        
+        .upload-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .upload-container h2 {
+            font-size: 3rem;
+            color: var(--caramel-brown);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .upload-container p {
+            font-size: 1.3rem;
+            color: var(--light-brown);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+        
+        .upload-area {
+            border: 3px dashed var(--caramel-brown);
+            border-radius: 12px;
+            padding: 4rem 2rem;
+            margin: 3rem auto;
+            background-color: rgba(166, 123, 91, 0.05);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .upload-area:hover {
+            background-color: rgba(166, 123, 91, 0.1);
+        }
+        
+        .upload-icon {
+            font-size: 4rem;
+            color: var(--caramel-brown);
+            margin-bottom: 1.5rem;
+        }
+        
+        .upload-area h3 {
+            font-size: 1.8rem;
+            color: var(--caramel-brown);
+            margin-bottom: 1rem;
+        }
+        
+        .upload-area p {
+            color: var(--light-brown);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .upload-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-family: 'Playfair Display', serif;
+            background-color: var(--caramel-brown);
+            color: var(--text-light);
+        }
+        
+        .upload-btn:hover {
+            background-color: var(--rich-brown);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .upload-preview {
+            max-width: 800px;
+            margin: 2rem auto 0;
+            display: none;
+        }
+        
+        .upload-preview img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Design Philosophy Section */
+        .design-philosophy {
+            padding: 6rem 0;
+            background-color: var(--warm-white);
+            text-align: center;
+        }
+        
+        .philosophy-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .philosophy-container h2 {
+            font-size: 3rem;
+            color: var(--rich-brown);
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+        
+        .philosophy-container p {
+            font-size: 1.3rem;
+            color: var(--chocolate-brown);
+            margin-bottom: 2rem;
+            line-height: 1.9;
+        }
+        
+        .philosophy-quote {
+            font-style: italic;
+            border-left: 4px solid var(--caramel-brown);
+            padding-left: 2rem;
+            margin: 3rem 0;
+            color: var(--dark-brown);
+            text-align: left;
+            font-size: 1.4rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--chocolate-brown);
+            color: var(--text-light);
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--light-brown);
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+        }
+        
+        .footer-logo span {
+            color: var(--caramel-brown);
+        }
+        
+        .footer-tagline {
+            font-size: 1.3rem;
+            color: var(--light-brown);
+            margin-bottom: 3rem;
+            font-style: italic;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+             padding:  0 10px; /*0 for bottom/10px for left*/
+        }
+        
+        .footer-links a {
+            color: var(--light-brown);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--caramel-brown);
+        }
+        
+        .copyright {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(215, 204, 200, 0.2);
+            width: 100%;
+            color: rgba(250, 249, 246, 0.7);
+            font-size: 1rem;
+        }
+        
+        .copyright a {
+            color: var(--caramel-brown);
+            text-decoration: none;
+        }
+        
+        .copyright a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .designs-hero h1 {
+                font-size: 3.2rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 2rem;
+            }
+            
+            .designs-hero {
+                padding: 6rem 0 4rem;
+            }
+            
+            .designs-hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .designs-hero p {
+                font-size: 1.3rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .category-tabs {
+                flex-wrap: wrap;
+            }
+            
+            .upload-container h2, .philosophy-container h2 {
+                font-size: 2.2rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .designs-hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .upload-area {
+                padding: 2rem 1rem;
+            }
+            
+            .upload-btn {
+                display: block;
+                width: 100%;
+                margin: 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Home<span>Muse</span></div>
+                <nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Guides.html">Guides</a></li>
+        <li><a href="designs.html" class="active">Inspiration</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+</nav>
+                    
+              
+                        
+                      
+                        
+                   
+                    
+                
+           
+    
+    </header>
+
+    <!-- Hero Section -->
+    <section class="designs-hero">
+        <div class="container">
+            <h1>Design Inspirations</h1>
+            <p>Discover beautiful spaces that tell unique stories. Our curated collection showcases transformative designs that blend aesthetics with functionality, providing endless inspiration for your own sanctuary.</p>
+            
+            <div class="inspiration-line">
+                <div class="divider"></div>
+                <span>WHERE BEAUTY MEETS FUNCTIONALITY</span>
+                <div class="divider"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Categories -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Explore by Category</h2>
+            <p class="section-subtitle">Browse our collection of design inspirations organized by room type and style</p>  
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all">All Designs</button>
+                <button class="category-tab" data-category="living">Living Spaces</button>
+                <button class="category-tab" data-category="bedroom">Bedrooms</button>
+                <button class="category-tab" data-category="kitchen">Kitchens</button>
+                <button class="category-tab" data-category="bathroom">Bathrooms</button>
+                <button class="category-tab" data-category="office">Home Offices</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Designs Gallery -->
+    <section class="designs-gallery">
+        <div class="container">
+            <div class="gallery-grid" id="designGallery">
+                <!-- Design Item 1: Living Room (Kept as is) -->
+                <div class="design-item" data-category="living">
+                    <div class="design-image">
+                        <div class="image-label">Living Room Layout Guide</div>
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Living Room Design">
+                    </div>
+                    <div class="design-overlay">
+                        <span class="design-category">Living Space</span>
+                        <h3>Harmonious Living Room</h3>
+                        <p>Optimal furniture placement for conversation and comfort in your main living area.</p>
+                    </div>
+                    <div class="design-info">
+                        <h3>Living Room Space Planning</h3>
+                        <p>This design demonstrates perfect living room proportions with strategic furniture placement. The layout considers conversation areas, traffic flow, and visual balance while maximizing comfort and social interaction.</p>
+                        <a href="#" class="view-details">View Layout Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Design Item 2: Bedroom - NOW WITH IMAGE -->
+                <div class="design-item" data-category="bedroom">
+                    <div class="design-image">
+                        <div class="image-label">Bedroom Essentials</div>
+                        <!-- Image aligned with description: bed, pillows, and bedding -->
+                        <img src="images/luxuary bedroom.jpg" alt="Bedroom Design with Bed, Pillows and Bedding">                  
+                                       </div>
+                    <div class="design-overlay">
+                        <span class="design-category">Bedroom</span>
+                        <h3>Essential Bedroom Elements</h3>
+                        <p>Bed, pillows, and bedding combine for ultimate comfort and style.</p>
+                    </div>
+                    <div class="design-info">
+                        <h3>Bedroom Comfort Essentials</h3>
+                        <p>Focus on the core elements that make a bedroom truly restful: a quality bed frame, supportive pillows, and luxurious bedding. This design showcases how these elements work together to create a cohesive and inviting sleep environment.</p>
+                        <a href="#" class="view-details">View Essentials Guide <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Design Item 3: Modern Living Space - NOW WITH IMAGE -->
+                <div class="design-item" data-category="living">
+                    <div class="design-image">
+                        <div class="image-label">Contemporary Living</div>
+                        <!-- Image aligned with description: clean lines and thoughtful furniture arrangement -->
+                        <img src="https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80" alt="Modern Living Room with Clean Lines">
+                    </div>
+                    <div class="design-overlay">
+                        <span class="design-category">Living Space</span>
+                        <h3>Contemporary Living Room</h3>
+                        <p>Clean lines and thoughtful furniture arrangement for modern living.</p>
+                    </div>
+                    <div class="design-info">
+                        <h3>Modern Living Space Design</h3>
+                        <p>A sophisticated living room design that balances aesthetics with practicality. The layout accommodates various seating arrangements while maintaining flow and visual harmony, perfect for both relaxation and entertaining.</p>
+                        <a href="#" class="view-details">View Design Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Design Item 4: Kitchen - NOW WITH IMAGE -->
+                <div class="design-item" data-category="kitchen">
+                    <div class="design-image">
+                        <div class="image-label">Kitchen Efficiency</div>
+                        <!-- Image aligned with description: work triangle optimization with modern appliances -->
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Efficient Kitchen Layout">
+                    </div>
+                    <div class="design-overlay">
+                        <span class="design-category">Kitchen</span>
+                        <h3>Efficient Kitchen Layout</h3>
+                        <p>Work triangle optimization with modern appliances and ample storage.</p>
+                    </div>
+                    <div class="design-info">
+                        <h3>Functional Kitchen Design</h3>
+                        <p>This kitchen design emphasizes the work triangle principle while incorporating modern aesthetics. Strategic placement of appliances, counter space, and storage creates an efficient workflow for cooking and food preparation.</p>
+                        <a href="#" class="view-details">View Kitchen Layout <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Design Item 5: Bathroom - NOW WITH IMAGE -->
+                <div class="design-item" data-category="bathroom">
+                    <div class="design-image">
+                        <div class="image-label">Luxury Bathroom</div>
+                        <!-- Image aligned with description: spa-inspired with luxury fixtures and natural materials -->
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Luxury Spa-Inspired Bathroom">
+                    </div>
+                    <div class="design-overlay">
+                        <span class="design-category">Bathroom</span>
+                        <h3>Luxury Bathroom Retreat</h3>
+                        <p>Serene design with premium fixtures and natural materials.</p>
+                    </div>
+                    <div class="design-info">
+                        <h3>Spa-Inspired Bathroom</h3>
+                        <p>A bathroom designed as a personal retreat, featuring high-quality materials, elegant fixtures, and a layout that maximizes both function and relaxation. Natural stone, warm lighting, and thoughtful storage create a luxurious yet practical space.</p>
+                        <a href="#" class="view-details">View Bathroom Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Design Item 6: Home Office (Kept as is) -->
+                <div class="design-item" data-category="office">
+                    <div class="design-image">
+                        <div class="image-label">Productive Workspace</div>
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1558&q=80" alt="Home Office">
+                    </div>
+                    <div class="design-overlay">
+                        <span class="design-category">Home Office</span>
+                        <h3>Ergonomic Home Office</h3>
+                        <p>Designed for focus, productivity, and comfort during long work hours.</p>
+                    </div>
+                    <div class="design-info">
+                        <h3>Productive Home Office Design</h3>
+                        <p>An ergonomic home office that balances professional functionality with residential comfort. The design includes proper desk height, adequate lighting, organized storage, and comfortable seating to support productivity and well-being.</p>
+                        <a href="#" class="view-details">View Office Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Philosophy Section -->
+    <section class="design-philosophy">
+        <div class="container">
+            <div class="philosophy-container">
+                <h2>Our Design Philosophy</h2>
+                <p>At Home Muse, we believe that great design should be both beautiful and functional. Every space we create tells a story—your story. We blend timeless principles with contemporary insights to craft environments that inspire and nurture.</p>
+                
+                <div class="philosophy-quote">
+                    <p>"The home should be the treasure chest of living. We don't just decorate spaces—we create environments that support how you live, work, and dream. Every design decision we make serves both aesthetic beauty and practical purpose."</p>
+                </div>
+                
+                <p>Our approach combines meticulous space planning, thoughtful material selection, and intuitive understanding of how people interact with their environments. The result is spaces that don't just look good—they feel right.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section class="upload-section">
+        <div class="container">
+            <div class="upload-container">
+                <h2>Share Your Design</h2>
+                <p>Have you created a beautiful space inspired by our designs? We'd love to see it! Share your photos with our community for a chance to be featured in our gallery.</p>
+                
+                <div class="upload-area" id="uploadAreaMain">
+                    <div class="upload-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <h3>Upload Your Design Photos</h3>
+                    <p>Drag and drop your images here, or click to browse. Supported formats: JPG, PNG, GIF (Max size: 10MB)</p>
+                    <input type="file" id="imageInputMain" accept="image/*" multiple style="display: none;">
+                    <button class="upload-btn" onclick="document.getElementById('imageInputMain').click()">Upload Images</button>
+                </div>
+                
+                <div id="uploadPreview" class="upload-preview">
+                    <!-- Image previews will appear here -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Home<span>Muse</span></div>
+                <p class="footer-tagline">Inspiration Lives Here.</p>
+                
+                <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="Guides.html">Guides</a>
+    <a href="designs.html" class="active">Inspiration</a>
+    <a href="about.html">About</a>
+</div>                    
+                    
+                    
+                    
+                
+           
+           
+            
+            <div class="copyright">
+                <p>© 2026 Home Muse. All rights reserved. | <a href="#">Inspiration Lives Here.</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Category filtering
+        document.querySelectorAll('.category-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Update active tab
+                document.querySelectorAll('.category-tab').forEach(t => {
+                    t.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                // Filter designs
+                const category = this.getAttribute('data-category');
+                const designItems = document.querySelectorAll('.design-item');
+                
+                designItems.forEach(item => {
+                    if (category === 'all' || item.getAttribute('data-category') === category) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+        
+        // Main upload area functionality
+        document.getElementById('imageInputMain').addEventListener('change', function(e) {
+            const files = e.target.files;
+            if (files.length > 0) {
+                const previewContainer = document.getElementById('uploadPreview');
+                previewContainer.innerHTML = '<h3 style="color: var(--caramel-brown); margin-bottom: 1rem;">Your Uploaded Images:</h3>';
+                
+                // Create a grid for multiple images
+                const imageGrid = document.createElement('div');
+                imageGrid.style.display = 'grid';
+                imageGrid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(200px, 1fr))';
+                imageGrid.style.gap = '1rem';
+                imageGrid.style.marginBottom = '2rem';
+                
+                for (let i = 0; i < Math.min(files.length, 5); i++) {
+                    const file = files[i];
+                    const reader = new FileReader();
+                    
+                    reader.onload = function(event) {
+                        const imgContainer = document.createElement('div');
+                        imgContainer.style.position = 'relative';
+                        imgContainer.style.borderRadius = '8px';
+                        imgContainer.style.overflow = 'hidden';
+                        imgContainer.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
+                        
+                        const img = document.createElement('img');
+                        img.src = event.target.result;
+                        img.style.width = '100%';
+                        img.style.height = '150px';
+                        img.style.objectFit = 'cover';
+                        img.style.display = 'block';
+                        
+                        const fileName = document.createElement('div');
+                        fileName.style.position = 'absolute';
+                        fileName.style.bottom = '0';
+                        fileName.style.left = '0';
+                        fileName.style.right = '0';
+                        fileName.style.background = 'rgba(62, 39, 35, 0.8)';
+                        fileName.style.color = 'var(--light-brown)';
+                        fileName.style.padding = '0.5rem';
+                        fileName.style.fontSize = '0.8rem';
+                        fileName.textContent = file.name.length > 20 ? file.name.substring(0, 20) + '...' : file.name;
+                        
+                        imgContainer.appendChild(img);
+                        imgContainer.appendChild(fileName);
+                        imageGrid.appendChild(imgContainer);
+                    };
+                    
+                    reader.readAsDataURL(file);
+                }
+                
+                previewContainer.appendChild(imageGrid);
+                
+                // Add submit button
+                const submitBtn = document.createElement('button');
+                submitBtn.className = 'upload-btn';
+                submitBtn.style.width = '100%';
+                submitBtn.textContent = 'Submit to Gallery';
+                submitBtn.onclick = submitImages;
+                
+                previewContainer.appendChild(submitBtn);
+                previewContainer.style.display = 'block';
+                
+                // Scroll to preview
+                previewContainer.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            }
+        });
+        
+        // Make upload area clickable
+        document.getElementById('uploadAreaMain').addEventListener('click', function(e) {
+            if (e.target.className !== 'upload-btn') {
+                document.getElementById('imageInputMain').click();
+            }
+        });
+        
+        // Function to submit images
+        function submitImages() {
+            alert('Thank you for sharing your design photos! They will be reviewed and may be featured in our gallery.');
+            document.getElementById('uploadPreview').style.display = 'none';
+            document.getElementById('imageInputMain').value = '';
+        }
+        
+        // Add fade-in animation to elements as they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.design-item');
+            
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(el);
+            });
+        });
+        
+        // Design item hover effects for items with images
+        document.querySelectorAll('.design-item').forEach(item => {
+            const img = item.querySelector('.design-image img');
+            if (img) {
+                item.addEventListener('mouseenter', function() {
+                    img.style.transform = 'scale(1.05)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    img.style.transform = 'scale(1)';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

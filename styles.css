@@ -1,0 +1,408 @@
+/* === COMMON STYLES FOR ALL PAGES === */
+:root {
+    --soft-white: #FAF9F6;
+    --warm-white: #F5F5F5;
+    --rich-brown: #8B4513;
+    --chocolate-brown: #5D4037;
+    --caramel-brown: #A67B5B;
+    --light-brown: #D7CCC8;
+    --dark-brown: #3E2723;
+    --text-dark: #2C1810;
+    --text-light: #FAF9F6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    line-height: 1.8;
+    color: var(--text-dark);
+    background-color: var(--soft-white);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Navigation - COMMON */
+header {
+    background-color: var(--soft-white);
+    padding: 1.5rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.5s ease;
+    box-shadow: 0 2px 20px rgba(139, 69, 19, 0.05);
+}
+
+header.scrolled {
+    padding: 1rem 0;
+    background-color: rgba(250, 249, 246, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--rich-brown);
+    letter-spacing: 2px;
+    font-family: 'Playfair Display', serif;
+}
+
+.logo span {
+    color: var(--caramel-brown);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+nav a {
+    color: var(--dark-brown);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+nav a:hover {
+    color: var(--rich-brown);
+}
+
+nav a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--rich-brown);
+    transition: width 0.3s;
+}
+
+nav a:hover:after {
+    width: 100%;
+}
+
+nav a.active {
+    color: var(--rich-brown);
+    font-weight: 600;
+}
+
+nav a.active:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--rich-brown);
+}
+
+/* Footer - COMMON */
+footer {
+    background-color: var(--chocolate-brown);
+    color: var(--text-light);
+    padding: 4rem 0 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.footer-logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--light-brown);
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.footer-logo span {
+    color: var(--caramel-brown);
+}
+
+.footer-tagline {
+    font-size: 1.3rem;
+    color: var(--light-brown);
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+.footer-links {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: var(--light-brown);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--caramel-brown);
+}
+
+.copyright {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(215, 204, 200, 0.2);
+    width: 100%;
+    color: rgba(250, 249, 246, 0.7);
+    font-size: 1rem;
+}
+
+.copyright a {
+    color: var(--caramel-brown);
+    text-decoration: none;
+}
+
+.copyright a:hover {
+    text-decoration: underline;
+}
+
+/* === HOME PAGE SPECIFIC === */
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: 
+        linear-gradient(rgba(250, 249, 246, 0.9), rgba(250, 249, 246, 0.7)),
+        url('https://images.unsplash.com/photo-1519710164239-da123dc03ef4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero-content {
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.main-statement {
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: var(--rich-brown);
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+    letter-spacing: -0.5px;
+}
+
+.sub-statement {
+    font-size: 2.2rem;
+    color: var(--chocolate-brown);
+    margin-bottom: 3rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Welcome Section */
+.welcome-section {
+    padding: 10rem 0;
+    background-color: var(--warm-white);
+}
+
+.welcome-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 4rem;
+    background-color: var(--soft-white);
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(139, 69, 19, 0.08);
+}
+
+.welcome-title {
+    font-size: 3.5rem;
+    color: var(--rich-brown);
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+/* Designs Preview */
+.designs-section {
+    padding: 8rem 0;
+    background-color: var(--soft-white);
+}
+
+.designs-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.designs-header h2 {
+    font-size: 2.8rem;
+    color: var(--rich-brown);
+    margin-bottom: 1rem;
+}
+
+.designs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.design-card {
+    background-color: var(--warm-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(139, 69, 19, 0.08);
+    transition: all 0.4s;
+}
+
+/* === GUIDES PAGE SPECIFIC === */
+.services-hero {
+    padding: 8rem 0 5rem;
+    background: 
+        linear-gradient(rgba(250, 249, 246, 0.9), rgba(250, 249, 246, 0.9)),
+        url('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.services-hero h1 {
+    font-size: 4rem;
+    color: var(--rich-brown);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.guides-intro {
+    padding: 6rem 0;
+    background-color: var(--warm-white);
+}
+
+.guide-container {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    background-color: var(--warm-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(139, 69, 19, 0.08);
+    padding: 3rem;
+}
+
+/* === DESIGNS PAGE SPECIFIC === */
+.designs-hero {
+    padding: 8rem 0 5rem;
+    background: 
+        linear-gradient(rgba(250, 249, 246, 0.9), rgba(250, 249, 246, 0.9)),
+        url('https://images.unsplash.com/photo-1615529328331-f8917597711f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.designs-hero h1 {
+    font-size: 4rem;
+    color: var(--rich-brown);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.categories-section {
+    padding: 6rem 0;
+    background-color: var(--warm-white);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+/* === ABOUT PAGE SPECIFIC === */
+/* About page has different structure, so we need these styles */
+.hero {
+    background-color: var(--warm-white);
+    padding: 80px 0 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--dark-brown);
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+/* Responsive Design - COMMON */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .main-statement {
+        font-size: 3.5rem;
+    }
+    
+    .services-hero h1, .designs-hero h1 {
+        font-size: 2.8rem;
+    }
+}

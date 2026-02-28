@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-385838029">
+    </script>
+    <script>
+        window.dataLayer=window.dataLayer||[];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js' ,new Date());
+        gtag('config', 'G-385838029');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Home Muse</title>
+    <!-- Fixed duplicate href, now only includes Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --soft-white: #FAF9F6;
+            --warm-white: #F5F5F5;
+            --rich-brown: #8B4513;
+            --chocolate-brown: #5D4037;
+            --caramel-brown: #A67B5B;
+            --light-brown: #D7CCC8;
+            --dark-brown: #3E2723;
+            --text-dark: #2C1810;
+            --text-light: #FAF9F6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+        
+        body {
+            background-color: var(--soft-white);
+            color: var(--dark-brown);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: var(--soft-white);
+            box-shadow: 0 2px 15px rgba(44, 24, 16, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--rich-brown);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            letter-spacing: 2px;
+
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            color: var(--rich-brown);
+        }
+        
+        .logo span {
+            color: var(--caramel-brown);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--chocolate-brown);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--rich-brown);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-color: var(--warm-white);
+            padding: 80px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238B4513' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3.2rem;
+            color: var(--dark-brown);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--chocolate-brown);
+        }
+        
+        /* Main Content Sections */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark-brown);
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--rich-brown);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .content-text {
+            flex: 1;
+        }
+        
+        .content-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(62, 39, 35, 0.1);
+        }
+        
+        .content-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+        
+        .content-image:hover img {
+            transform: scale(1.03);
+        }
+        
+        .content-text h3 {
+            font-size: 1.8rem;
+            color: var(--dark-brown);
+            margin-bottom: 20px;
+        }
+        
+        .content-text p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: var(--chocolate-brown);
+        }
+        
+        .highlight-box {
+            background-color: var(--light-brown);
+            border-left: 5px solid var(--rich-brown);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .highlight-box p {
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--dark-brown);
+            margin: 0;
+        }
+        
+        /* Values Section */
+        .values-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .value-card {
+            background-color: var(--soft-white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(62, 39, 35, 0.08);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(62, 39, 35, 0.12);
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--rich-brown);
+            margin-bottom: 20px;
+        }
+        
+        .value-card h4 {
+            font-size: 1.5rem;
+            color: var(--dark-brown);
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-brown);
+            color: var(--text-light);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+        
+        .footer-column p, .footer-column a {
+            color: var(--light-brown);
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .footer-column a:hover {
+            color: var(--text-light);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--text-light);
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--rich-brown);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--chocolate-brown);
+            color: var(--light-brown);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+            
+            .content-wrapper.reverse {
+                flex-direction: column-reverse;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .hero {
+                padding: 60px 0 40px;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <!-- Make logo clickable to home page -->
+            <a href="index.html" class="logo">
+                <i class="fas fa-home"></i>
+                Home<span>Muse</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="guides.html">Guides</a></li>
+                    <li><a href="designs.html">Inspiration</a></li>
+                    <li><a href="about.html" style="color: var(--rich-brown); font-weight: 600;">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>About Home Muse</h1>
+            <p>Where modern aesthetics meet cozy comfort, and global trends become personal stories. We're here to transform how you see your home.</p>
+        </div>
+    </section>
+
+    <!-- Who We Are Section -->
+           <section class="section"> 
+            <div class="content-wrapper">
+                <div class="content-text">
+                <div class="container">
+    <div class="section-title">
+        <h2>Who We Are</h2>
+    </div>
+    
+    <div class="content-text" style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <h3>Designers & Storytellers</h3>
+        <p>We are a passionate group of designers, stylists, and home enthusiasts dedicated to inspiring you to change your home decor forever. Our journey began with a simple observation: every home has a unique story waiting to be told, but many people struggle to find their narrative in the noise of design trends.</p>
+        <p>Through our carefully crafted guides, we provide practical tips and creative solutions to the decor dilemmas you face daily. We don't just show you beautiful spaces—we give you the tools to create them yourself, ensuring your home reflects your personality and lifestyle.</p>
+        <p>Our expertise spans modern minimalism, cozy maximalism, and everything in between. We draw inspiration from global design movements while keeping functionality at the forefront of every recommendation.</p>
+    </div>
+
+    <div class="highlight-box">
+        <p>"We inspire you to change your home decor FOREVER through our guides which give you practical tips to find the solutions you seek."</p>
+    </div>
+</div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Values</h2>
+            </div>
+            
+            <div class="values-container">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h4>Inspiration First</h4>
+                    <p>We believe great design starts with inspiration. We constantly explore global trends to bring you fresh, innovative ideas for your home.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h4>Practical Solutions</h4>
+                    <p>Beautiful design should be accessible. We focus on practical, implementable tips that solve real decor problems without requiring a professional budget.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Personal Expression</h4>
+                    <p>Your home should tell your story. We encourage personal expression and help you create spaces that truly reflect your personality and lifestyle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Home Muse</h3>
+                    <p>Inspiring transformative home decor through practical guides and modern, cozy aesthetics.</p>
+                    <div class="https://www.pinterest.com/HomeMuseMinimalDwelling/"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://www.instagram.com/homemuse21?igsh=MTQwM24xZXI1Y2hxcg=="><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1HxoceDTdr/"><i class="fab fa-facebook-f"></i></a>
+                        <a href=
+"https://www.tiktok.com/@homemgwk5c4?_r=1&_t=ZP-94IgkuISp2M
+"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="guides.html">Decor Guides</a>
+                    <a href="designs.html">Room Inspiration</a>
+                    <a href="about.html">About</a>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope" style="margin-right: 10px;"></i> homemuse21@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Home Muse. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--caramel-brown);"></i> for every home's story.</p>
+            </div>
+        </div>
+    </footer>
+
+ <script>
+        // Simple script for smooth scrolling – only for hash links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                // If the link is a hash (starts with '#'), handle smooth scroll
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(href);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+                // Otherwise, do nothing – the browser will navigate normally
+            });
+        });
+        
+        // Add animation to value cards on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe value cards
+            document.querySelectorAll('.value-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s, transform 0.5s';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
